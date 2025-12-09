@@ -6,6 +6,9 @@
 - [Face Value? Exploring the Effects of Embodiment for a Group Facilitation Agent](#face-value-exploring-the-effects-of-embodiment-for-a-group-facilitation-agent)
 - [The benefit of being physically present](#the-benefit-of-being-physically-present-a-survey-of-experimental-works-comparing-copresent-robots-telepresent-robots-and-virtual-agents)
 
+### [動物型ロボット・デザイン (Zoomorphic Robots & Design)](#動物型ロボットデザイン)
+- [The Prevalence and Potential Problem of Cuteness in Zoomorphic Robots](#the-prevalence-and-potential-problem-of-cuteness-in-zoomorphic-robots)
+
 ---
 
 ## エージェントの身体性・存在感
@@ -43,5 +46,26 @@
 - 説得力、注意、ユーザー態度など多様な従属変数での効果を分析
 
 **リンク:** [ScienceDirect](https://doi.org/10.1016/j.ijhcs.2015.01.001)
+
+---
+
+## 動物型ロボット・デザイン
+
+## The Prevalence and Potential Problem of Cuteness in Zoomorphic Robots
+
+**著者:** Isobel Voysey, Lynne Baillie, Joanne Williams, Michael Herrmann
+**会議/ジャーナル:** ACM Transactions on Human-Robot Interaction (THRI)
+**概要:** かわいさ（cuteness）は強力な美学であり、心理学研究によると、乳児、動物の赤ちゃん、おもちゃなどのかわいいものは私たちの注意を引きつけ、養育行動を促進し、好みに影響を与える。そのため、かわいさはロボティクスを含む多くの消費者製品で一般的なデザイン成果となっている。しかし、本論文では、動物型（zoomorphic）ロボットをかわいくすることには、様々な動物へのアナロジーがもたらす複雑さのために問題がある可能性を指摘している。動物とロボティクスにおけるかわいさの影響を要約し、異なる犬型ロボットと犬種におけるベビースキーマ特徴の存在を比較することで、2つの領域の交差点を分析。最後に、かわいい動物型ロボットの利点と欠点について考察し、動物の福祉を中心に据えた新しいデザインアプローチを提案している。
+
+**Abstract:** Cuteness is a powerful aesthetic, and psychological research shows that cute things such as infants, baby animals, and toys capture and secure our attention, promote nurturing behaviour, and influence our preferences. Therefore, cuteness is a common design outcome in many consumer products, including robotics. However, we suggest that making cute zoomorphic robots may not be without its issues due to the complexities introduced by the analogies they make to various animals. We summarise the impact of cuteness in animals and robotics and analyse the intersection of the two domains by comparing the presence of baby schema features in different canine zoomorphic robots and dog breeds. Finally, we speculate on the benefits and drawbacks to cute zoomorphic robots, and provide suggestions for a new design approach that centres animals' well-being. The aim of this work is to synthesise research on cuteness from different disciplines and prompt robot designers to be more conscious of cuteness and its potentially detrimental consequences in zoomorphic robots.
+
+**特徴:**
+- 心理学、人間-動物インタラクション、人間-ロボットインタラクションの学際的な文献レビュー
+- 犬型ロボットと実際の犬種におけるベビースキーマ特徴（目のサイズ、額のサイズ、頭蓋指数）の定量的比較
+- かわいさを「ダークパターン」として批判的に検討
+- 動物福祉を中心に据えた「zoocentric」デザインアプローチの提案
+- 短頭種（brachycephalic）の健康問題とロボットデザインの関連性を指摘
+
+**リンク:** [ACM Digital Library](https://dl.acm.org/doi/10.1145/3659623)
 
 ---
