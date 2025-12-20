@@ -11,6 +11,7 @@
 
 ### [RAG (Retrieval-Augmented Generation)](#rag-retrieval-augmented-generation)
 - [Multiple Abstraction Level Retrieve Augment Generation](#multiple-abstraction-level-retrieve-augment-generation)
+- [Beyond Chunking: Discourse-Aware Hierarchical Retrieval for Long Document Question Answering](#beyond-chunking-discourse-aware-hierarchical-retrieval-for-long-document-question-answering)
 
 ---
 
@@ -91,5 +92,24 @@
 - 従来のVanilla RAGと比較して回答正確性を25.739%向上
 
 **リンク:** [arXiv](https://arxiv.org/abs/2501.16952)
+
+---
+
+## Beyond Chunking: Discourse-Aware Hierarchical Retrieval for Long Document Question Answering
+
+**著者:** Huiyao Chen, Yi Yang, Yinghui Li, Meishan Zhang, Min Zhang
+**会議/ジャーナル:** arXiv preprint, 2025 (arXiv:2506.06313)
+**概要:** 長文書の質問応答システムは、通常テキストをフラットなシーケンスとして処理するか、任意のセグメンテーションを使用しており、人間の理解を導く談話構造を捉えることができていない。本研究では、修辞構造理論（RST）を活用して長文書の質問応答を強化する談話認識型階層フレームワーク「DISRetrieval」を提案している。このアプローチは、談話木を文レベルの表現に変換し、LLMで強化されたノード表現を用いて構造的情報と意味的情報を橋渡しする。フレームワークには3つの主要な革新が含まれる：長文書向けの特化した談話解析、LLMベースの談話関係ノードの強化、構造誘導型階層検索。QASPER、QuALITY、NarrativeQAでの包括的な実験により、既存のアプローチに対する一貫した改善を実証している。
+
+**Abstract:** Long document question answering systems typically process texts as flat sequences or use arbitrary segmentation, failing to capture discourse structures that guide human comprehension. We present a discourse-aware hierarchical framework that leverages rhetorical structure theory (RST) to enhance long document question answering. Our approach converts discourse trees into sentence-level representations and employs LLM-enhanced node representations to bridge structural and semantic information. The framework involves three key innovations: specialized discourse parsing for lengthy documents, LLM-based enhancement of discourse relation nodes, and structure-guided hierarchical retrieval. Comprehensive experiments on QASPER, QuALITY, and NarrativeQA demonstrate consistent improvements over existing approaches. Ablation studies confirm that incorporating discourse structure significantly enhances question answering across diverse document types.
+
+**特徴:**
+- 修辞構造理論（RST）を活用した談話認識型階層フレームワーク
+- 文レベルの談話解析と段落レベル・文書レベルの木構造統合
+- LLMによるノード表現の強化（bottom-up semantic enhancement）
+- 構造誘導型の二重選択戦略による証拠検索
+- QASPER、QuALITY、NarrativeQAの3つのベンチマークで既存手法を上回る性能
+
+**リンク:** [arXiv](https://arxiv.org/abs/2506.06313) | [GitHub](https://github.com/DreamH1gh/DISRetrieval)
 
 ---
