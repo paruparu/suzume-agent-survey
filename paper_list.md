@@ -12,6 +12,7 @@
 ### [RAG (Retrieval-Augmented Generation)](#rag-retrieval-augmented-generation)
 - [Multiple Abstraction Level Retrieve Augment Generation](#multiple-abstraction-level-retrieve-augment-generation)
 - [Beyond Chunking: Discourse-Aware Hierarchical Retrieval for Long Document Question Answering](#beyond-chunking-discourse-aware-hierarchical-retrieval-for-long-document-question-answering)
+- [Evaluating Chunking Strategies for Retrieval](#evaluating-chunking-strategies-for-retrieval)
 
 ---
 
@@ -111,5 +112,25 @@
 - QASPER、QuALITY、NarrativeQAの3つのベンチマークで既存手法を上回る性能
 
 **リンク:** [arXiv](https://arxiv.org/abs/2506.06313) | [GitHub](https://github.com/DreamH1gh/DISRetrieval)
+
+---
+
+## Evaluating Chunking Strategies for Retrieval
+
+**著者:** Brandon Smith, Anton Troynikov
+**会議/ジャーナル:** Chroma Technical Report, 2024
+**概要:** ドキュメントのチャンキングは前処理ステップとしてほぼ普遍的に使用されているにもかかわらず、検索性能への影響を調査した研究はほとんどない。これは、一般的に使用される情報検索ベンチマークが文書全体の検索タスクを対象としているためである。本研究では、トークンレベルの関連性を考慮した評価アプローチを提示し、いくつかの一般的なドキュメントチャンキング戦略の評価を可能にしている。チャンキング戦略の選択が検索性能に大きな影響を与えることを実証し、一部の戦略は他の戦略よりもリコールで最大9%優れていることを示した。また、ClusterSemanticChunkerとLLMChunkerという2つの新しいチャンキング戦略を提案・評価している。
+
+**Abstract:** Despite document chunking being virtually ubiquitous as a pre-processing step, little work has been done to investigate its impact on retrieval performance. This is partially due to the structure of commonly used information retrieval benchmarks, which are aimed at whole-document retrieval tasks. In this work we present an evaluation approach which takes token-level relevance into account, and allows for the evaluation of several popular document chunking strategies. We demonstrate that the choice of chunking strategy can have a significant impact on retrieval performance, with some strategies outperforming others by up to 9% in recall.
+
+**特徴:**
+- トークンレベルでの検索性能評価フレームワークの提案
+- Intersection over Union (IoU)、Precision、Recallをトークンレベルで測定
+- RecursiveCharacterTextSplitter等の一般的なチャンキング戦略の比較評価
+- ClusterSemanticChunker（埋め込みモデルを考慮したチャンキング）の提案
+- LLMChunker（LLMを直接使用したチャンキング）の提案
+- 5つの多様なコーパス（State of the Union、Wikitext、Chatlogs、Finance、Pubmed）での評価
+
+**リンク:** [Chroma Research](https://research.trychroma.com/evaluating-chunking) | [GitHub](https://github.com/brandonstarxel/chunking_evaluation)
 
 ---
