@@ -9,6 +9,11 @@
 ### [動物型ロボット・デザイン (Zoomorphic Robots & Design)](#動物型ロボットデザイン)
 - [The Prevalence and Potential Problem of Cuteness in Zoomorphic Robots](#the-prevalence-and-potential-problem-of-cuteness-in-zoomorphic-robots)
 
+### [RAG (Retrieval-Augmented Generation)](#rag-retrieval-augmented-generation)
+- [Multiple Abstraction Level Retrieve Augment Generation](#multiple-abstraction-level-retrieve-augment-generation)
+- [Beyond Chunking: Discourse-Aware Hierarchical Retrieval for Long Document Question Answering](#beyond-chunking-discourse-aware-hierarchical-retrieval-for-long-document-question-answering)
+- [Evaluating Chunking Strategies for Retrieval](#evaluating-chunking-strategies-for-retrieval)
+
 ---
 
 ## エージェントの身体性・存在感
@@ -67,5 +72,65 @@
 - 短頭種（brachycephalic）の健康問題とロボットデザインの関連性を指摘
 
 **リンク:** [ACM Digital Library](https://dl.acm.org/doi/10.1145/3659623)
+
+---
+
+## RAG (Retrieval-Augmented Generation)
+
+## Multiple Abstraction Level Retrieve Augment Generation
+
+**著者:** Zheng Zheng, Xinyi Ni, Pengyu Hong
+**会議/ジャーナル:** arXiv preprint, 2025 (arXiv:2501.16952)
+**概要:** 大規模言語モデル（LLM）を活用したRetrieval-Augmented Generation（RAG）モデルは、新しいデータや知識への適応において、より高速でコスト効率の良いソリューションを提供する。しかし、既存のアプローチの多くは、質問応答（Q/A）をサポートするための参照として固定サイズのチャンクを取得することに依存しており、単一の抽象レベルでの情報ニーズに対応するために展開されることが多い。本研究では、複数の抽象レベル（MAL）のチャンクを使用する新しいRAGアプローチを提案している。これには、複数文レベル、段落レベル、セクションレベル、文書レベルが含まれる。糖鎖科学（Glycoscience）という未開拓の科学領域でアプローチの有効性を実証し、従来の単一レベルRAGアプローチと比較して、Q/Aの回答正確性を25.739%向上させた。
+
+**Abstract:** A Retrieval-Augmented Generation (RAG) model powered by a large language model (LLM) provides a faster and more cost-effective solution for adapting to new data and knowledge. It also delivers more specialized responses compared to pre-trained LLMs. However, most existing approaches rely on retrieving prefix-sized chunks as references to support question-answering (Q/A). This approach is often deployed to address information needs at a single level of abstraction, as it struggles to generate answers across multiple levels of abstraction. In an RAG setting, while LLMs can summarize and answer questions effectively when provided with sufficient details, retrieving excessive information often leads to the 'lost in the middle' problem and exceeds token limitations. We propose a novel RAG approach that uses chunks of multiple abstraction levels (MAL), including multi-sentence-level, paragraph-level, section-level, and document-level. The effectiveness of our approach is demonstrated in an under-explored scientific domain of Glycoscience. Compared to traditional single-level RAG approaches, our approach improves AI evaluated answer correctness of Q/A by 25.739% on Glyco-related papers.
+
+**特徴:**
+- 複数の抽象レベル（文書、セクション、段落、複数文）でのチャンク生成
+- map-reduceアプローチによる要約情報の抽出
+- 「lost in the middle」問題とトークン制限の軽減
+- 糖鎖科学ドメインでの7,652件の学術論文を用いた評価
+- 従来のVanilla RAGと比較して回答正確性を25.739%向上
+
+**リンク:** [arXiv](https://arxiv.org/abs/2501.16952)
+
+---
+
+## Beyond Chunking: Discourse-Aware Hierarchical Retrieval for Long Document Question Answering
+
+**著者:** Huiyao Chen, Yi Yang, Yinghui Li, Meishan Zhang, Min Zhang
+**会議/ジャーナル:** arXiv preprint, 2025 (arXiv:2506.06313)
+**概要:** 長文書の質問応答システムは、通常テキストをフラットなシーケンスとして処理するか、任意のセグメンテーションを使用しており、人間の理解を導く談話構造を捉えることができていない。本研究では、修辞構造理論（RST）を活用して長文書の質問応答を強化する談話認識型階層フレームワーク「DISRetrieval」を提案している。このアプローチは、談話木を文レベルの表現に変換し、LLMで強化されたノード表現を用いて構造的情報と意味的情報を橋渡しする。フレームワークには3つの主要な革新が含まれる：長文書向けの特化した談話解析、LLMベースの談話関係ノードの強化、構造誘導型階層検索。QASPER、QuALITY、NarrativeQAでの包括的な実験により、既存のアプローチに対する一貫した改善を実証している。
+
+**Abstract:** Long document question answering systems typically process texts as flat sequences or use arbitrary segmentation, failing to capture discourse structures that guide human comprehension. We present a discourse-aware hierarchical framework that leverages rhetorical structure theory (RST) to enhance long document question answering. Our approach converts discourse trees into sentence-level representations and employs LLM-enhanced node representations to bridge structural and semantic information. The framework involves three key innovations: specialized discourse parsing for lengthy documents, LLM-based enhancement of discourse relation nodes, and structure-guided hierarchical retrieval. Comprehensive experiments on QASPER, QuALITY, and NarrativeQA demonstrate consistent improvements over existing approaches. Ablation studies confirm that incorporating discourse structure significantly enhances question answering across diverse document types.
+
+**特徴:**
+- 修辞構造理論（RST）を活用した談話認識型階層フレームワーク
+- 文レベルの談話解析と段落レベル・文書レベルの木構造統合
+- LLMによるノード表現の強化（bottom-up semantic enhancement）
+- 構造誘導型の二重選択戦略による証拠検索
+- QASPER、QuALITY、NarrativeQAの3つのベンチマークで既存手法を上回る性能
+
+**リンク:** [arXiv](https://arxiv.org/abs/2506.06313) | [GitHub](https://github.com/DreamH1gh/DISRetrieval)
+
+---
+
+## Evaluating Chunking Strategies for Retrieval
+
+**著者:** Brandon Smith, Anton Troynikov
+**会議/ジャーナル:** Chroma Technical Report, 2024
+**概要:** ドキュメントのチャンキングは前処理ステップとしてほぼ普遍的に使用されているにもかかわらず、検索性能への影響を調査した研究はほとんどない。これは、一般的に使用される情報検索ベンチマークが文書全体の検索タスクを対象としているためである。本研究では、トークンレベルの関連性を考慮した評価アプローチを提示し、いくつかの一般的なドキュメントチャンキング戦略の評価を可能にしている。チャンキング戦略の選択が検索性能に大きな影響を与えることを実証し、一部の戦略は他の戦略よりもリコールで最大9%優れていることを示した。また、ClusterSemanticChunkerとLLMChunkerという2つの新しいチャンキング戦略を提案・評価している。
+
+**Abstract:** Despite document chunking being virtually ubiquitous as a pre-processing step, little work has been done to investigate its impact on retrieval performance. This is partially due to the structure of commonly used information retrieval benchmarks, which are aimed at whole-document retrieval tasks. In this work we present an evaluation approach which takes token-level relevance into account, and allows for the evaluation of several popular document chunking strategies. We demonstrate that the choice of chunking strategy can have a significant impact on retrieval performance, with some strategies outperforming others by up to 9% in recall.
+
+**特徴:**
+- トークンレベルでの検索性能評価フレームワークの提案
+- Intersection over Union (IoU)、Precision、Recallをトークンレベルで測定
+- RecursiveCharacterTextSplitter等の一般的なチャンキング戦略の比較評価
+- ClusterSemanticChunker（埋め込みモデルを考慮したチャンキング）の提案
+- LLMChunker（LLMを直接使用したチャンキング）の提案
+- 5つの多様なコーパス（State of the Union、Wikitext、Chatlogs、Finance、Pubmed）での評価
+
+**リンク:** [Chroma Research](https://research.trychroma.com/evaluating-chunking) | [GitHub](https://github.com/brandonstarxel/chunking_evaluation)
 
 ---
