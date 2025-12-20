@@ -9,6 +9,9 @@
 ### [動物型ロボット・デザイン (Zoomorphic Robots & Design)](#動物型ロボットデザイン)
 - [The Prevalence and Potential Problem of Cuteness in Zoomorphic Robots](#the-prevalence-and-potential-problem-of-cuteness-in-zoomorphic-robots)
 
+### [RAG (Retrieval-Augmented Generation)](#rag-retrieval-augmented-generation)
+- [Multiple Abstraction Level Retrieve Augment Generation](#multiple-abstraction-level-retrieve-augment-generation)
+
 ---
 
 ## エージェントの身体性・存在感
@@ -67,5 +70,26 @@
 - 短頭種（brachycephalic）の健康問題とロボットデザインの関連性を指摘
 
 **リンク:** [ACM Digital Library](https://dl.acm.org/doi/10.1145/3659623)
+
+---
+
+## RAG (Retrieval-Augmented Generation)
+
+## Multiple Abstraction Level Retrieve Augment Generation
+
+**著者:** Zheng Zheng, Xinyi Ni, Pengyu Hong
+**会議/ジャーナル:** arXiv preprint, 2025 (arXiv:2501.16952)
+**概要:** 大規模言語モデル（LLM）を活用したRetrieval-Augmented Generation（RAG）モデルは、新しいデータや知識への適応において、より高速でコスト効率の良いソリューションを提供する。しかし、既存のアプローチの多くは、質問応答（Q/A）をサポートするための参照として固定サイズのチャンクを取得することに依存しており、単一の抽象レベルでの情報ニーズに対応するために展開されることが多い。本研究では、複数の抽象レベル（MAL）のチャンクを使用する新しいRAGアプローチを提案している。これには、複数文レベル、段落レベル、セクションレベル、文書レベルが含まれる。糖鎖科学（Glycoscience）という未開拓の科学領域でアプローチの有効性を実証し、従来の単一レベルRAGアプローチと比較して、Q/Aの回答正確性を25.739%向上させた。
+
+**Abstract:** A Retrieval-Augmented Generation (RAG) model powered by a large language model (LLM) provides a faster and more cost-effective solution for adapting to new data and knowledge. It also delivers more specialized responses compared to pre-trained LLMs. However, most existing approaches rely on retrieving prefix-sized chunks as references to support question-answering (Q/A). This approach is often deployed to address information needs at a single level of abstraction, as it struggles to generate answers across multiple levels of abstraction. In an RAG setting, while LLMs can summarize and answer questions effectively when provided with sufficient details, retrieving excessive information often leads to the 'lost in the middle' problem and exceeds token limitations. We propose a novel RAG approach that uses chunks of multiple abstraction levels (MAL), including multi-sentence-level, paragraph-level, section-level, and document-level. The effectiveness of our approach is demonstrated in an under-explored scientific domain of Glycoscience. Compared to traditional single-level RAG approaches, our approach improves AI evaluated answer correctness of Q/A by 25.739% on Glyco-related papers.
+
+**特徴:**
+- 複数の抽象レベル（文書、セクション、段落、複数文）でのチャンク生成
+- map-reduceアプローチによる要約情報の抽出
+- 「lost in the middle」問題とトークン制限の軽減
+- 糖鎖科学ドメインでの7,652件の学術論文を用いた評価
+- 従来のVanilla RAGと比較して回答正確性を25.739%向上
+
+**リンク:** [arXiv](https://arxiv.org/abs/2501.16952)
 
 ---
